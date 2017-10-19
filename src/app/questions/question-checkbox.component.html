@@ -1,0 +1,18 @@
+<div [formGroup]="form">
+	<div *ngFor="let answer of question.answers; let j = index" class="form-check">
+		<label for="answer-{{ answer.id }}" class="form-check-label">
+			<input type="{{ question.type }}" class="form-control" 
+				formControlName="question-{{question.id}}" 
+				id="answer-{{answer.id}}" 
+				value="{{answer.id}}" 
+				name="question-{{question.id}}" 
+				(change)="checboxChanged(question.id, answer.id, $event.target.checked)"
+				class="form-check-input" />
+
+			{{ answer.text }} 
+		</label>
+	</div>
+	<div class="alert alert-danger validation-error" *ngIf="!form.controls['question-'+question.id].valid && !form.controls['question-'+question.id].pristine">
+		{{getErrorMessages(form.controls['question-'+question.id].errors)}}
+	</div>
+</div>

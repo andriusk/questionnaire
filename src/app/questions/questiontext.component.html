@@ -1,0 +1,7 @@
+<div [formGroup]="form">
+	<input type="{{ question.type }}" class="form-control" [ngClass]="{'is-invalid': isInvalid(form.controls['question-'+question.id])}" formControlName="question-{{question.id}}" id="question-{{question.id}}" placeholder="{{ question.title }}">
+
+	<div class="invalid-feedback" *ngIf="isInvalid(form.controls['question-'+question.id])">
+		{{getErrorMessages(form.controls['question-'+question.id].errors)}}
+	</div>
+</div>

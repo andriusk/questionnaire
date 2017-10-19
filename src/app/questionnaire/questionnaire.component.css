@@ -1,0 +1,12 @@
+.button-container {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.button-container .left {
+	float: left
+}
+
+.button-container .right {
+	float: right;
+}

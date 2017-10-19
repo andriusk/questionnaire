@@ -1,0 +1,11 @@
+<div [formGroup]="form">
+	<select class="form-control" formControlName="question-{{question.id}}" [ngClass]="{'is-invalid': isInvalid(form.controls['question-'+question.id])}">
+		<option *ngFor="let answer of question.answers; let j = index" value="{{answer.value}}">
+			{{ answer.text }}
+		</option>
+	</select>
+
+	<div class="invalid-feedback" *ngIf="isInvalid(form.controls['question-'+question.id])">
+		{{getErrorMessages(form.controls['question-'+question.id].errors)}}
+	</div>
+</div>
