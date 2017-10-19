@@ -19,10 +19,13 @@ git clone https://github.com/andriusk/questionnaire.git
 cd questionnaire
 npm install
 ```
-### 2. Compile and run application
+### 3. Compile and run application
 ```sh
 ng serve
 ```
+
+### To stop server pres Ctrl + c on your console window.
+
 ## Launching
 
 * To open application navigate to http://localhost:4200/ with your browser.
