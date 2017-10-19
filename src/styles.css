@@ -22,3 +22,7 @@ body {
 	max-width: 50%;
 	margin: auto;
 }
+
+.summary-table {
+	padding-top: 25px;
+}
